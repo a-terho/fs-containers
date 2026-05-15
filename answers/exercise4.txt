@@ -1,0 +1,7 @@
+apt-get install -y curl
+curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
+apt-get install -y nodejs
+8
+18
+node /usr/src/app/index.js
+output is: Hello World
