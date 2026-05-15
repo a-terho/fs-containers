@@ -1,6 +1,18 @@
+FROM node:24 AS test-stage
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN npm ci
+
+RUN npm test -- --reporter=junit --outputFile=test-results.xml
+
 FROM node:24 AS build-stage
 
 WORKDIR /usr/src/app
+
+COPY --from=test-stage /usr/src/app/test-results.xml ./test-results.xml
 
 COPY . .
 
