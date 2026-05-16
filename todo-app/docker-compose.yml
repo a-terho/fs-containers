@@ -22,8 +22,6 @@ services:
     build:
       context: todo-backend
       dockerfile: Dockerfile
-    volumes:
-      - ./todo-backend:/usr/src/app
     environment:
       - REDIS_URL=redis://redis:6379
       - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
