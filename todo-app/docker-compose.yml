@@ -14,7 +14,7 @@ services:
     image: todo-front
     build:
       context: todo-frontend
-      dockerfile: ../front.Dockerfile
+      dockerfile: Dockerfile
     container_name: todo-frontend
 
   server:
