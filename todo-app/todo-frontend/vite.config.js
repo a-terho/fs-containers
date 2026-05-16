@@ -9,4 +9,7 @@ export default defineConfig({
     setupFiles: './vitest.setup.js',
     globals: true,
   },
+  server: {
+    allowedHosts: ['localhost', 'app'],
+  },
 });
