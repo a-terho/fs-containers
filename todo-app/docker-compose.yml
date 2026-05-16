@@ -8,7 +8,7 @@ services:
     container_name: reverse-proxy
     depends_on:
       - app
-      - server
+      - backend
 
   app:
     image: todo-front
@@ -17,7 +17,7 @@ services:
       dockerfile: Dockerfile
     container_name: todo-frontend
 
-  server:
+  backend:
     image: todo-backend
     build:
       context: todo-backend
